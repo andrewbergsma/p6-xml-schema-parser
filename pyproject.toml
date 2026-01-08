@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p6schema"
+version = "1.0.0"
+description = "CLI utility for parsing and analyzing Oracle P6 EPPM schema files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Andrew"}
+]
+keywords = ["oracle", "p6", "eppm", "ppm", "schema", "database"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+p6schema = "p6schema:main"
+
+[tool.setuptools]
+py-modules = ["p6schema"]
+
+[tool.setuptools.package-data]
+"*" = ["schemas/*.xml"]
