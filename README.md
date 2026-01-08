@@ -313,3 +313,58 @@ ppm_YY_MM_schema.xml    (e.g., ppm_23_04_schema.xml)
 ```
 
 The registry will automatically discover them on next run.
+
+## MCP Server
+
+The P6 Schema Parser can also run as an MCP (Model Context Protocol) server, allowing LLMs to query schema information directly.
+
+### Installation
+
+Install with MCP support:
+
+```bash
+pip install -e ".[mcp]"
+```
+
+### Running the Server
+
+```bash
+# Using FastMCP CLI
+fastmcp run p6schema_mcp.py
+
+# Or directly
+python p6schema_mcp.py
+```
+
+### Claude Desktop Configuration
+
+Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+
+```json
+{
+  "mcpServers": {
+    "p6schema": {
+      "command": "python",
+      "args": ["/path/to/p6schema_mcp.py"]
+    }
+  }
+}
+```
+
+### Available Tools
+
+| Tool | Description |
+|------|-------------|
+| `list_schemas` | List all available schemas in the registry |
+| `get_schema_info` | Get metadata about a schema |
+| `list_tables` | List all tables in a schema |
+| `describe_table` | Get detailed table structure |
+| `get_relationships` | Show foreign key relationships for a table |
+| `search` | Search tables, fields, or relationships |
+| `compare_schemas` | Compare two schema versions |
+| `get_fields` | List fields (optionally filtered by table) |
+| `get_constraints` | List primary/foreign key constraints |
+| `get_stats` | Show schema statistics |
+| `config_show` | Show current configuration |
+| `config_set_default` | Set the default schema |
+| `config_clear_default` | Clear the default schema setting |
