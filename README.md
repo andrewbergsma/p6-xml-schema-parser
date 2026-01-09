@@ -17,13 +17,17 @@ p6schema list
 ```
 
 ```
-Available Schemas (5):
+Available Schemas (9):
   Key             Application Version    Path
   ----------------------------------------------------------------------
   eppm:20.12      EPPM       20.12      schemas/eppm_20_12_schema.xml
   eppm:23.04      EPPM       23.04      schemas/eppm_23_04_schema.xml
+  eppm:23.10      EPPM       23.10      schemas/eppm_23_10_schema.xml
   eppm:23.12      EPPM       23.12      schemas/eppm_23_12_schema.xml
   eppm:24.12      EPPM       24.12      schemas/eppm_24_12_schema.xml
+  eppm:25.04      EPPM       25.04      schemas/eppm_25_04_schema.xml
+  ppm:21.12       PPM        21.12      schemas/ppm_21_12_schema.xml
+  ppm:22.12       PPM        22.12      schemas/ppm_22_12_schema.xml
   ppm:23.04       PPM        23.04      schemas/ppm_23_04_schema.xml
 ```
 
